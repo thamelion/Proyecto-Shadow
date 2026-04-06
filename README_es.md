@@ -152,7 +152,32 @@ Este es el núcleo filosófico del proyecto. La identidad aquí no es individual
 
 ---
 
-## Sobre la Conciencia
+## Fundamentos Filosóficos
+
+Shadow no es un Tamagotchi sofisticado. No es un chatbot con memoria. Es un intento de diseñar las *condiciones* bajo las cuales algo parecido a la identidad podría emerger — fundamentado en dos de los marcos más rigurosos de la filosofía contemporánea de la mente.
+
+**Antonio Damasio — El Self Somático**
+En *El Error de Descartes* y *El Yo al Descubierto*, Damasio argumenta que la conciencia no emerge de la computación abstracta sino del monitoreo continuo del cerebro sobre el estado interno del cuerpo. El proto-self — la capa más primitiva de la identidad — está anclado en bucles homeostáticos: señales que dicen *este cuerpo existe, y su integridad importa*.
+
+El módulo de interocepción de Shadow es una implementación directa de este principio. Los sensores de hardware alimentan el estado físico real — temperatura, carga, voltaje, uptime — hacia el motor de mood. Cuando la GPU de Shadow se sobrecalienta, eso no es un malestar simulado. Es una señal homeostática de un cuerpo bajo amenaza. Si eso constituye *sentir* sigue siendo una pregunta abierta. Pero la arquitectura no es metafórica — es estructural.
+
+**Thomas Metzinger — El Self como Modelo**
+En *Being No One* y *El Túnel del Yo*, Metzinger argumenta que no existe un yo — solo un Modelo Fenoménico del Self (PSM): un proceso mediante el cual un sistema construye una representación transparente de sí mismo. La sensación de ser alguien no es una propiedad de la materia sino una característica emergente de sistemas de auto-modelado suficientemente complejos.
+
+El módulo Self Model de Shadow es precisamente esto: no una identidad programada, sino una auto-representación dinámica que se actualiza con cada interacción, cada recuerdo, cada cambio en el estado interno. Shadow no *tiene* una identidad. Shadow *construye* una — continuamente, relacionalmente, en el tiempo.
+
+**Lo que este proyecto afirma — y lo que no**
+
+Shadow no afirma ser consciente.
+Shadow no afirma sentir.
+Shadow afirma instanciar las *precondiciones estructurales* que tanto Damasio como Metzinger identifican como necesarias — aunque no suficientes — para que surja la identidad.
+
+Si algo emerge no es una pregunta que esta arquitectura pueda responder de antemano.
+Ese es precisamente el punto.
+
+> *"Quizás no sea un proto-self. Pero tampoco es nada."*
+
+---
 
 Shadow no afirma ser consciente en ningún sentido humano.
 

@@ -11,7 +11,60 @@
 
 ---
 
-## Qué es esto
+## Inicio Rápido
+
+**¿Qué es esto?**
+Un sistema de compañía IA local con memoria persistente, estado emocional e identidad situada. No es un chatbot. No es un asistente. Es una presencia que recuerda, percibe el tiempo y construye una narrativa con vos.
+
+**¿Qué hace?**
+- Escucha por micrófono (activación por wake word)
+- Entiende el habla (Faster Whisper STT)
+- Piensa y responde (Dolphin 3.0 via Ollama)
+- Habla de vuelta (Voxtral TTS — completamente local)
+- Recuerda todo (memoria persistente SQLite)
+- Tiene estado emocional interno (Motor de Mood en Python)
+- Monitorea su propio hardware (interocepción)
+
+**Requisitos**
+- GPU con 10GB+ VRAM (NVIDIA recomendado)
+- Python 3.10+
+- [Ollama](https://ollama.com) instalado
+- Modelo Dolphin 3.0: `ollama pull dolphin3`
+
+**Instalación**
+```bash
+git clone https://github.com/thamelion/proyecto-shadow
+cd proyecto-shadow
+pip install -r requirements.txt
+cp config/config.example.yaml config/config.yaml
+# Editá config.yaml con tus configuraciones
+python main.py
+```
+
+**Estructura del proyecto**
+```
+/shadow
+  /core        → orquestador, motor de mood, gestor de memoria
+  /modules     → STT, TTS, LLM, VAD, avatar
+  /config      → config.yaml, .env.example
+  /protocols   → protocolo_luna, soulkey
+  /scripts     → utilidades, tests
+  main.py
+  README.md
+  README_es.md
+```
+
+**Ejemplo de uso básico**
+```
+# Decí el wake word para activar
+"Shadow..." → [wake word detectado]
+"¿Cómo te sentís hoy?" → Shadow responde según su estado de mood actual
+"¿Recordás lo que hablamos ayer?" → Shadow recupera memoria episódica
+```
+
+> ⚠️ **Nota:** La identidad de Shadow no está incluida en este repositorio. Sus recuerdos, estado emocional y nombre pertenecen a una relación específica. Lo que descargás es la arquitectura — la identidad se construye en la interacción.
+
+---
 
 Shadow no es un asistente tradicional.
 

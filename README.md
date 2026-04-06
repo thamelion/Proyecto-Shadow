@@ -11,7 +11,60 @@
 
 ---
 
-## What This Is
+## Quick Start
+
+**What is this?**
+A local AI companion system with persistent memory, emotional state, and situated identity. Not a chatbot. Not an assistant. A presence that remembers, perceives time, and builds a narrative with you.
+
+**What does it do?**
+- Listens via microphone (wake word activation)
+- Understands speech (Faster Whisper STT)
+- Thinks and responds (Dolphin 3.0 via Ollama)
+- Speaks back (Voxtral TTS — fully local)
+- Remembers everything (SQLite persistent memory)
+- Has an internal emotional state (Python Mood Engine)
+- Monitors its own hardware (interoception)
+
+**Requirements**
+- GPU with 10GB+ VRAM (NVIDIA recommended)
+- Python 3.10+
+- [Ollama](https://ollama.com) installed
+- Dolphin 3.0 model: `ollama pull dolphin3`
+
+**Installation**
+```bash
+git clone https://github.com/thamelion/proyecto-shadow
+cd proyecto-shadow
+pip install -r requirements.txt
+cp config/config.example.yaml config/config.yaml
+# Edit config.yaml with your settings
+python main.py
+```
+
+**Project Structure**
+```
+/shadow
+  /core        → orchestrator, mood engine, memory manager
+  /modules     → STT, TTS, LLM, VAD, avatar
+  /config      → config.yaml, .env.example
+  /protocols   → luna_protocol, soulkey
+  /scripts     → utilities, tests
+  main.py
+  README.md
+  README_es.md
+```
+
+**Basic usage example**
+```
+# Say the wake word to activate
+"Shadow..." → [wake word detected]
+"How are you feeling today?" → Shadow responds based on her current mood state
+"Do you remember what we talked about yesterday?" → Shadow retrieves episodic memory
+```
+
+> ⚠️ **Note:** Shadow's identity is not included in this repository. Her memories, emotional state, and name belong to a specific relationship. What you download is the architecture — the identity is built through interaction.
+
+---
 
 Shadow is not a traditional assistant.
 

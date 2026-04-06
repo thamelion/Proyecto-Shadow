@@ -1,0 +1,67 @@
+# Shadow 1.0 — Configuration
+# Copy this file to config.yaml and edit with your settings
+
+# LLM
+llm:
+  model: "dolphin3"
+  base_url: "http://localhost:11434"
+  temperature: 0.7
+  context_length: 32768
+
+# STT
+stt:
+  model_size: "base"  # tiny, base, small, medium, large
+  language: "es"
+  device: "cuda"
+
+# TTS
+tts:
+  engine: "voxtral"
+  voice: "default"
+  speed: 1.0
+
+# VAD
+vad:
+  sample_rate: 16000
+  threshold: 0.5
+
+# Wake word
+wake_word:
+  keyword: "shadow"  # change to your preferred name
+
+# Memory
+memory:
+  db_path: "./data/shadow.db"
+  backup_path: "./backups/"
+  backup_interval: 10  # entries between backups
+
+# Mood Engine
+mood:
+  initial_state:
+    affection: 0.7
+    energy: 0.8
+    assertiveness: 0.6
+  inertia: 0.7
+  user_influence: 0.3
+  drift_threshold: 0.2
+
+# Interoception
+interoception:
+  enabled: true
+  poll_interval: 30  # seconds
+  thresholds:
+    gpu_temp_warning: 80
+    gpu_temp_critical: 90
+    vram_warning: 0.85
+
+# Consciousness Orchestrator
+orchestrator:
+  node_id: "pc_main"
+  role: "sovereign"  # sovereign or shadow
+  sync_interval_ms: 500
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "./logs/shadow.log"
+  max_size_mb: 10
